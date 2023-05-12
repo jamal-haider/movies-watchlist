@@ -19,6 +19,13 @@ body{
     color: white;
 }
 
+.header a{
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 1.25rem;
+    color: white;
+}
+
 .search{
     margin: 0 auto;
     width: 80vw;
@@ -50,5 +57,17 @@ body{
     font-size: 1.1rem;
     color: 374151;
 }
+.main{
+    
+    
+
+}
+.no-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 55vh;
+}
+
 
 
