@@ -24,9 +24,12 @@ async function fetchMovieDetail(id){
                             <div class="movie__card-stats">
                                 <p>${movie.Runtime}</p>
                                 <p>${movie.Genre}</p>
-                                <p><div class="watchlist-plus">+</div>Watchlist</p>
+                                <div class="movie__card-watchlist">
+                                <img src="images/plus.png" alt="Plus icon" />
+                                    Watchlist
+                                </div>
                             </div>
-                            <p class="description">${movie.Plot}</p>
+                            <p class="movie__card-description">${movie.Plot}</p>
                         </div>
                     </div>
                 `
