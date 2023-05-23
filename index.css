@@ -70,6 +70,15 @@ body{
     align-items: center;
 }
 
+.no-data-found{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #DFDDDD;
+    font-weight: 600 !important;
+    font-size: 1.25rem;
+}
+
 
 .movie__card{
     display: flex;
@@ -123,14 +132,7 @@ body{
     color: #6B7280;
     font-size: 1em;
     line-height: 25px;
-
 }
-
-
-
-
-
-
 
 
 @media screen and (min-width: 768px){
@@ -151,9 +153,15 @@ body{
     }
     
     
-.movie__card-description{
-    font-size: 1.25em;
-    line-height: 35px;
+    .movie__card-description{
+        font-size: 1.25em;
+        line-height: 35px;
 
+    }
 }
+
+@media screen and (min-width: 1000px){
+    .header{
+        padding: 10rem 3rem !important; 
+    }
 }

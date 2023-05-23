@@ -44,13 +44,21 @@ function fetchMovies(e){
         fetch(`http://www.omdbapi.com/?apikey=${apiKey}&s=${searchText}`)
             .then(res => res.json())
             .then(data => {
-                
-                const tempMoviesArray = data.Search.slice(0, 3)
-                mainContent.innerHTML = ""
-                
-                tempMoviesArray.map(movie => {
-                    fetchMovieDetail(movie.imdbID)
-                })
+
+                if(data.Search){
+                    const tempMoviesArray = data.Search.slice(0, 3)   
+                    mainContent.innerHTML = ""
+                    tempMoviesArray.map(movie => {
+                        fetchMovieDetail(movie.imdbID)
+                    })   
+                }
+                else{
+                    mainContent.innerHTML = `
+                        <div class="no-data-found" id="no-data-found">
+                        <p>Unable to find what you're looking for. Please try another search.</p>
+                    </div>
+                    `
+                }
             })
     }
 }
