@@ -14,7 +14,7 @@ searchMoviesForm.addEventListener('submit', fetchMovies)
 function handleWishlist(movieId){
     const sweetAlertText = document.getElementById('sweet__alert-text')
     
-    fetch(`http://www.omdbapi.com/?apikey=${apiKey}&i=${movieId}`)
+    fetch(`https://www.omdbapi.com/?apikey=${apiKey}&i=${movieId}`)
         .then(res => res.json())
         .then(data => {
             
@@ -41,7 +41,7 @@ function handleWishlist(movieId){
 console.log(wishlistFromLocalStorage)
 
 async function fetchMovieDetail(id){
-    const res = await fetch(`http://www.omdbapi.com/?apikey=${apiKey}&i=${id}`)
+    const res = await fetch(`https://www.omdbapi.com/?apikey=${apiKey}&i=${id}`)
     const movie = await res.json()
     
     mainContent.innerHTML += `
@@ -73,7 +73,7 @@ function fetchMovies(e){
     
     const searchText = textInp.value
     if(searchText){
-        fetch(`http://www.omdbapi.com/?apikey=${apiKey}&s=${searchText}`)
+        fetch(`https://www.omdbapi.com/?apikey=${apiKey}&s=${searchText}`)
             .then(res => res.json())
             .then(data => {
 
