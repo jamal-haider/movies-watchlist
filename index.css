@@ -134,6 +134,27 @@ body{
     line-height: 25px;
 }
 
+.sweet__alert{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sweet__alert p{
+    padding: 0.5rem 2rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+    color: white;
+    font-weight: 400;
+    background-color: rgb(104, 211, 129);
+    display: none;
+}
+
+.sweet__alert p.danger{
+    background-color: rgb(255, 88, 88);
+}
+
+
+
 
 @media screen and (min-width: 768px){
     .header{
